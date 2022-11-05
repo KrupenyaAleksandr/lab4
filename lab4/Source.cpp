@@ -11,9 +11,7 @@ public:
 		this->age = age;
 		this->sex = sex;
 	}
-	~human(){
-		delete name;
-	};
+	~human(){};
 	
 	void print() {
 		cout << *this->name << " " << this->age << " " << this->sex << endl;
@@ -27,7 +25,7 @@ private:
 
 class student : public human {
 public:
-	student() {};
+	student(){};
 	student(string name, int age, char sex, int course, string group) {
 		this->name = new string(name);
 		this->age = age;
@@ -35,9 +33,7 @@ public:
 		this->course = course;
 		this->group = new string(group);
 	}
-	~student() {
-		delete group;
-	}
+	~student(){};
 
 	void print() {
 		cout << *this->name << " " << this->age << " " << this->sex << " " << this->course << " " << *this->group << endl;
