@@ -26,10 +26,7 @@ private:
 class student : public human {
 public:
 	student(){};
-	student(string name, int age, char sex, int course, string group) {
-		this->name = new string(name);
-		this->age = age;
-		this->sex = sex;
+	student(string name, int age, char sex, int course, string group) : human(name, age, sex) {
 		this->course = course;
 		this->group = new string(group);
 	}
