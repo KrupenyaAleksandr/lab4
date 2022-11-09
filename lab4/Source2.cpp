@@ -19,7 +19,6 @@ public:
 			inputfile >> tmp;
 			for (int i = 0; i < tmp.length(); ++i) {
 				if ((tmp[i] >= 32 && tmp[i] <= 64) || (tmp[i] >= 91 && tmp[i] <= 96) || (tmp[i] >= 123 && tmp[i] <= 127)) {
-					count++;
 					continue;
 				}
 				if (tmp[i] < 0) {
@@ -45,6 +44,9 @@ public:
 				}
 			}
 		}
+		double percentUp;
+		cout.precision(2);
+		cout << 100 / double(count) * upCount << " " <<  100 - (100 / double(count) * upCount) << endl;
 		cout << count << ' ' << upCount << ' ' << lowCount << endl;
 	}
 private:
